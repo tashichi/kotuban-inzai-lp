@@ -1,0 +1,52 @@
+/* カスタムCSS */
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background-color: #fdf2f8;
+    color: #333;
+}
+
+/* アスペクト比のためのユーティリティクラス */
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 アスペクト比 */
+}
+
+.aspect-w-16 > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* スムーズなスクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* レスポンシブ画像 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* フォーカス状態 */
+a:focus, button:focus {
+    outline: 2px solid #ec4899;
+    outline-offset: 2px;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* 印西地域の小さな装飾 */
+.custom-decoration {
+    background: linear-gradient(135deg, #fdf2f8 25%, #fce7f3 100%);
+}
